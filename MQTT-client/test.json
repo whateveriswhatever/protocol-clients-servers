@@ -1,0 +1,38 @@
+[
+  {
+    "system_code": "678678",
+    "system_name": "abcdex",
+    "device_code": "scanner",
+    "device_name": "scanner1",
+    "alert_type": 3,
+    "description": "Scanner error",
+    "note": "Check scanner settings"
+  },
+  {
+    "system_code": "789789",
+    "system_name": "fghijk",
+    "device_code": "projector",
+    "device_name": "projector1",
+    "alert_type": 1,
+    "description": "Lamp failure",
+    "note": "Replace the lamp"
+  },
+  {
+    "system_code": "890890",
+    "system_name": "lmnopq",
+    "device_code": "server",
+    "device_name": "server1",
+    "alert_type": 2,
+    "description": "High CPU usage",
+    "note": "Optimize server processes"
+  },
+  {
+    "system_code": "901901",
+    "system_name": "rstuvw",
+    "device_code": "keyboard",
+    "device_name": "keyboard1",
+    "alert_type": 1,
+    "description": "Key malfunction",
+    "note": "Clean or replace key"
+  }
+]
