@@ -1,0 +1,38 @@
+[
+  {
+    "system_code": "558412",
+    "system_name": "vwxyz",
+    "device_code": "desktop",
+    "device_name": "desktop7",
+    "alert_type": 22,
+    "description": "Memory error detected",
+    "note": "Check RAM modules"
+  },
+  {
+    "system_code": "334578",
+    "system_name": "abcdef",
+    "device_code": "tablet",
+    "device_name": "tablet2",
+    "alert_type": 9,
+    "description": "Battery overheating",
+    "note": "Turn off device and cool down"
+  },
+  {
+    "system_code": "789654",
+    "system_name": "ghijkl",
+    "device_code": "server",
+    "device_name": "server3",
+    "alert_type": 25,
+    "description": "Network connectivity issue",
+    "note": "Check network cables and restart router"
+  },
+  {
+    "system_code": "112233",
+    "system_name": "mnopqr",
+    "device_code": "smartphone",
+    "device_name": "phone5",
+    "alert_type": 14,
+    "description": "Screen malfunction",
+    "note": "Restart device or visit service center"
+  }
+]

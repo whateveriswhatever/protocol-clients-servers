@@ -153,18 +153,18 @@ async def main():
         
         # Example: Send a test message
         test_message = {
-            "system_code": "CLIENT069",
-            "system_name": "Client XNZZ",
-            "device_code": "Device X",
-            "device_name": "2342dsada11",
+            "system_code": "CLIENT002",
+            "system_name": "Client B",
+            "device_code": "Device Z",
+            "device_name": "poipopzzz",
             "alert_type": 3,
-            "alert_content": "Clien XNZZ test message",
-            "note": "Sent from client 1"
+            "alert_content": "Client 2 test message",
+            "note": "Sent from client 2"
         }
         
-        test_csv_message1 = """URDK,QTP,6279,CL,1,ztz,yquoax"""
+        test_csv_message = """CLIENT008,Client FVG,Device X,...,2,Client 2 test message,Sent from client 2"""
         
-        await client.send_message(test_csv_message1, format_type="csv")
+        await client.send_message(test_csv_message, format_type="csv")
         
         # Keep the client running
         try:

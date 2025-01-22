@@ -1,10 +1,8 @@
 import asyncio
 import logging
-from asyncua import ua, Server, uamethod
+from asyncua import ua, Server
 import json
 from datetime import datetime
-import csv
-from io import StringIO
 
 class UAServer:
     def __init__(self, endpoint, username, password):
@@ -14,7 +12,7 @@ class UAServer:
         self._server = None
         self._running = False
         
-        # Configured logging
+        # Configure logging
         logging.basicConfig(level=logging.INFO)
         self._logger = logging.getLogger("asyncua.server")
         
@@ -97,69 +95,15 @@ class UAServer:
             self._logger.error(f"Error in creating the server structure ----> {str(ex)}")
             raise
     
-    def parse_csv_to_json(self, csv_string):
-        """Convert CSV string into JSON format"""
-        try:
-            # Use StringIO to erect a file-like object from the string
-            csv_file = StringIO(csv_string)
-            csv_reader = csv.DictReader(csv_file)
-            
-            # Convert CSV rows to list of dictionaries
-            data = list(csv_reader)
-            
-            if not data:
-                raise ValueError("Empty CSV data")
-
-            return json.dumps(data)
-        except Exception as ex:
-            self._logger.error(f"CSV parsing error ----> {str(ex)}")
-            raise
-    
-    def parse_json_to_csv(self, json_string):
-        """Convert JSON string to CSV format"""
-        try:
-            # Parse JSON string to Python object
-            data = json.loads(json_string)
-            
-            if not data or not isinstance(data, list):
-                raise ValueError("Invalid JSON data structure!!!")
-            
-            # Get headers from the first dictionary
-            headers = data[0].keys()
-            
-            # Create StringIO object to write CSV
-            output = StringIO()
-            writer = csv.DictWriter(output, fieldnames=headers)
-            
-            # Write headers and rows
-            writer.writeheader()
-            writer.writerows(data)
-            
-            return output.getvalue()
-        
-        except Exception as ex:
-            self._logger.error(f"JSON to CSV format conversion error ----> {str(ex)}")
-            raise
-            
     async def on_value_change(self, node, val):
         """Handler for value changes from clients"""
         try:
             if node == self._ext_system_data.nodeid:
                 self._logger.info(f"Received value change from client: {val}")
                 
-                # Detect if the incoming data is CSV or JSON
-                try:
-                    # Try to parse as JSON object
-                    json.loads(val)
-                    processed_val = val
-                except json.JSONDecodeError:
-                    # If JSON parsing is failed, assuming that the data format is CSV and converting it into JSON
-                    self._logger.info("Converting CSV to JSON format...")
-                    processed_val = self.parse_csv_to_json(val)
-                
                 # Create a proper DataValue object for relay
                 dv = ua.DataValue(
-                    ua.Variant(processed_val, ua.VariantType.String)
+                    ua.Variant(val, ua.VariantType.String)
                 )
                 dv.ServerTimestamp = datetime.now()
                 dv.SourceTimestamp = datetime.now()

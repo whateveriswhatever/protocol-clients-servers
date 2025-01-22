@@ -1,9 +1,14 @@
 import asyncio
 import tkinter as tk
-from tkinter import scrolledtext, messagebox
+from tkinter import scrolledtext, messagebox, filedialog
 from threading import Thread
-import json  # Added missing import
+import json
+import csv
+import logging
 from clientTesting1 import UAClient
+
+# Configure logging
+logging.basicConfig(level=logging.INFO)
 
 class OPCUAClientGUI:
     def __init__(self, root):
@@ -14,8 +19,6 @@ class OPCUAClientGUI:
         self.client = None
         self.loop = asyncio.new_event_loop()
         self.subscription = None
-        
-        # Rest of your GUI setup remains the same until the connect_to_server method...
         
         # Server connection frame
         self.connection_frame = tk.LabelFrame(root, text="Server Connection")
@@ -76,9 +79,139 @@ class OPCUAClientGUI:
         self.message_display = scrolledtext.ScrolledText(self.subscription_frame, height=10, state="disabled")
         self.message_display.pack(padx=5, pady=5, fill="both")
 
+        # Add file sending frame after message frame
+        self.file_frame = tk.LabelFrame(root, text="Send File Data")
+        self.file_frame.pack(padx=10, pady=5, fill="x")
+        
+        self.file_path_var = tk.StringVar()
+        self.file_path_entry = tk.Entry(self.file_frame, textvariable=self.file_path_var, width=40)
+        self.file_path_entry.grid(row=0, column=0, padx=5, pady=2)
+        
+        self.browse_button = tk.Button(self.file_frame, text="Browse", command=self.browse_file)
+        self.browse_button.grid(row=0, column=1, padx=5, pady=2)
+        
+        self.send_file_button = tk.Button(self.file_frame, text="Send File Data", command=self.send_file_data, state="disabled")
+        self.send_file_button.grid(row=1, column=0, columnspan=2, pady=5)
+
+    def browse_file(self):
+        """Open file dialog to select JSON or CSV file"""
+        filetypes = [
+            ('JSON files', '*.json'),
+            ('CSV files', '*.csv')
+        ]
+        filename = filedialog.askopenfilename(filetypes=filetypes)
+        if filename:
+            self.file_path_var.set(filename)
+
+    def read_json_file(self, file_path):
+        """Read and parse JSON file"""
+        with open(file_path, 'r') as file:
+            return json.load(file)
+
+    def read_csv_file(self, file_path):
+        """Read CSV file row by row, skipping header"""
+        with open(file_path, 'r') as file:
+            csv_reader = csv.DictReader(file)
+            for row in csv_reader:
+                if row:  # Skip empty lines
+                    yield row
+
+    def send_file_data(self):
+        """Send all data from selected file"""
+        if not self.client:
+            messagebox.showerror("Error", "Not connected to the server!")
+            return
+
+        file_path = self.file_path_var.get()
+        if not file_path:
+            messagebox.showerror("Error", "Please select a file first!")
+            return
+
+        async def send_multiple():
+            try:
+                message_sent = 0
+                total_messages = 0
+                
+                
+                # Determine file type
+                if file_path.endswith('.json'):
+                    with open(file_path, 'r') as file:
+                        data = json.load(file)
+                    if not isinstance(data, list):
+                        data = [data]  # Convert single object to list
+                    
+                    total_messages = len(data)    
+                    for idx, message in enumerate(data, 1):
+                        # Adding a unique identifier to each message
+                        message["message_id"] = f"msg_{idx}"
+                        message["total_message"] = total_messages
+                        
+                        # Sending each message with increased delay
+                        await self.client.send_message(message, "json")
+                        message_sent += 1
+                        
+                        self.root.after(0, self.display_message, f"Sent message {idx}/{total_messages}: {json.dumps(message)[:100]}...")
+                        
+                        # Increased delay to ensure proper processing
+                        await asyncio.sleep(3) # 3 seconds delay between each message
+                        
+                        
+                elif file_path.endswith(".csv"):
+                    
+                    # Counting total rows in advanced
+                    with open(file_path, 'r') as file:
+                        total_messages = sum(1 for row in csv.reader(file)) - 1 # Substracting the header
+                    
+                    with open(file_path, 'r') as file:
+                        csv_reader = csv.reader(file)
+                        next(csv_reader)  # Skip header
+                        for idx, row in enumerate(csv_reader, 1):
+                            if row:  # Skip empty lines
+                                message = ','.join(row)  # Convert each CSV row to a string
+                                logging.info(f"Sending message {idx}: {message}")
+                                await self.client.send_message(message, "csv")
+                                message_sent += 1
+                                
+                                self.root.after(0, self.display_message, f"Sent message {idx}/{total_messages}")
+                                
+                                await asyncio.sleep(3)  # Increased delay to ensure proper processing
+                else:
+                    raise ValueError("Unsupported file type!!!")
+
+                self.root.after(0, messagebox.showinfo, "Success", "Successfully sent all messages!")
+            except Exception as e:
+                logging.error(f"Failed to send file data: {str(e)}")
+                self.root.after(0, messagebox.showerror, "Error", f"Failed to send file data: {str(e)}\nMessage sent: {message_sent}/{total_messages}")
+
+        Thread(target=self.run_async_task, args=(send_multiple(),)).start()
+
+    def update_gui_after_connect(self):
+        """Update GUI elements after successful connection"""
+        self.connect_button["state"] = "disabled"
+        self.disconnect_button["state"] = "normal"
+        self.send_button["state"] = "normal"
+        self.send_file_button["state"] = "normal"  # Enable file sending button
+
+    def update_gui_after_disconnect(self):
+        """Update GUI elements after disconnection"""
+        self.connect_button["state"] = "normal"
+        self.disconnect_button["state"] = "disabled"
+        self.send_button["state"] = "disabled"
+        self.send_file_button["state"] = "disabled"  # Disable file sending button
+
     async def message_callback(self, message):
         """Callback function for received messages"""
-        self.root.after(0, self.display_message, f"Received: {message}")
+        try:
+            if isinstance(message, dict):
+                displayed_text = f"Received message {message.get("message_id", "unknown")}: {json.dumps(message)[:100]}..."
+            else:
+                displayed_text = f"Received: {message}"
+            
+            self.root.after(0, self.display_message, displayed_text)
+        except Exception as ex:
+            logging.error(f"Error in message callback: {str(ex)}")
+            
+            self.root.after(0, self.display_message, f"Received: {message}")
 
     async def setup_subscription(self):
         """Set up subscription after connection"""
@@ -111,12 +244,14 @@ class OPCUAClientGUI:
         self.connect_button["state"] = "disabled"
         self.disconnect_button["state"] = "normal"
         self.send_button["state"] = "normal"
+        self.send_file_button["state"] = "normal"
 
     def update_gui_after_disconnect(self):
         """Update GUI elements after disconnection"""
         self.connect_button["state"] = "normal"
         self.disconnect_button["state"] = "disabled"
         self.send_button["state"] = "disabled"
+        self.send_file_button["state"] = "disabled"
 
     def disconnect_from_server(self):
         if self.client:
