@@ -1,0 +1,5 @@
+SysCode,SysName,DeviceCode,DeviceName,DataExtType,Content,Remark
+ABCD,EFG,7890,EF,66,mnop,uvwxyza
+EFGH,IJK,8901,GH,77,qrst,abcdefg
+WXYZ,XYZ,9012,XY,88,uvwx,hijklmn
+MNOP,DEF,0123,DE,99,abcd,wxyzabc

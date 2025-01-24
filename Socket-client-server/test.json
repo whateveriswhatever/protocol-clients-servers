@@ -1,0 +1,38 @@
+[
+  {
+    "system_code": "615940",
+    "system_name": "abcdef",
+    "device_code": "laptop",
+    "device_name": "laptop3",
+    "alert_type": 33,
+    "description": "CPU usage high",
+    "note": "Investigate running processes"
+  },
+  {
+    "system_code": "728051",
+    "system_name": "ghijkl",
+    "device_code": "server",
+    "device_name": "server2",
+    "alert_type": 44,
+    "description": "Disk space low",
+    "note": "Clear unnecessary files"
+  },
+  {
+    "system_code": "839162",
+    "system_name": "mnopqr",
+    "device_code": "desktop",
+    "device_name": "desktop7",
+    "alert_type": 55,
+    "description": "Memory leak detected",
+    "note": "Restart affected application"
+  },
+  {
+    "system_code": "940273",
+    "system_name": "stuvwx",
+    "device_code": "tablet",
+    "device_name": "tablet1",
+    "alert_type": 66,
+    "description": "Battery overheating",
+    "note": "Check cooling system"
+  }
+]
