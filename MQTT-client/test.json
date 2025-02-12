@@ -1,38 +1,47 @@
 [
   {
-    "system_code": "678678",
-    "system_name": "abcdex",
-    "device_code": "scanner",
-    "device_name": "scanner1",
+    "system_code": "223344",
+    "system_name": "mnopqr",
+    "device_code": "router",
+    "device_name": "router1",
     "alert_type": 3,
-    "description": "Scanner error",
-    "note": "Check scanner settings"
+    "description": "Network instability",
+    "note": "Restart the router"
   },
   {
-    "system_code": "789789",
-    "system_name": "fghijk",
-    "device_code": "projector",
-    "device_name": "projector1",
+    "system_code": "334455",
+    "system_name": "stuvwx",
+    "device_code": "monitor",
+    "device_name": "monitor1",
     "alert_type": 1,
-    "description": "Lamp failure",
-    "note": "Replace the lamp"
+    "description": "No display signal",
+    "note": "Check cable connections"
   },
   {
-    "system_code": "890890",
-    "system_name": "lmnopq",
-    "device_code": "server",
-    "device_name": "server1",
+    "system_code": "445566",
+    "system_name": "abcdef",
+    "device_code": "mouse",
+    "device_name": "mouse1",
     "alert_type": 2,
-    "description": "High CPU usage",
-    "note": "Optimize server processes"
+    "description": "Unresponsive clicks",
+    "note": "Check battery or connection"
   },
   {
-    "system_code": "901901",
-    "system_name": "rstuvw",
-    "device_code": "keyboard",
-    "device_name": "keyboard1",
+    "system_code": "556677",
+    "system_name": "ghijkl",
+    "device_code": "webcam",
+    "device_name": "webcam1",
+    "alert_type": 3,
+    "description": "Low image quality",
+    "note": "Adjust lighting or focus"
+  },
+  {
+    "system_code": "667788",
+    "system_name": "opqrst",
+    "device_code": "speaker",
+    "device_name": "speaker1",
     "alert_type": 1,
-    "description": "Key malfunction",
-    "note": "Clean or replace key"
+    "description": "No sound output",
+    "note": "Check volume settings"
   }
 ]
