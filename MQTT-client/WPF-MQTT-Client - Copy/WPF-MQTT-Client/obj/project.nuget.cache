@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "JsZIYTYp9CQ=",
+  "success": true,
+  "projectFilePath": "E:\\self_learning\\projects\\protocol-clients-servers\\MQTT-client\\WPF-MQTT-Client - Copy\\WPF-MQTT-Client\\WPF-MQTT-Client.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Lenovo\\.nuget\\packages\\mqttnet\\5.0.1.1416\\mqttnet.5.0.1.1416.nupkg.sha512",
+    "C:\\Users\\Lenovo\\.nuget\\packages\\mqttnet.extensions.managedclient\\4.3.7.1207\\mqttnet.extensions.managedclient.4.3.7.1207.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,50 @@
+E:\self_learning\projects\protocol-clients-servers\MQTT-client\WPF-MQTT-Client\WPF-MQTT-Client\obj\Debug\net9.0-windows\WPF-MQTT-Client.csproj.AssemblyReference.cache
+E:\self_learning\projects\protocol-clients-servers\MQTT-client\WPF-MQTT-Client\WPF-MQTT-Client\obj\Debug\net9.0-windows\MainWindow.g.cs
+E:\self_learning\projects\protocol-clients-servers\MQTT-client\WPF-MQTT-Client\WPF-MQTT-Client\obj\Debug\net9.0-windows\App.g.cs
+E:\self_learning\projects\protocol-clients-servers\MQTT-client\WPF-MQTT-Client\WPF-MQTT-Client\obj\Debug\net9.0-windows\WPF-MQTT-Client_MarkupCompile.cache
+E:\self_learning\projects\protocol-clients-servers\MQTT-client\WPF-MQTT-Client\WPF-MQTT-Client\obj\Debug\net9.0-windows\WPF-MQTT-Client_MarkupCompile.lref
+E:\self_learning\projects\protocol-clients-servers\MQTT-client\WPF-MQTT-Client\WPF-MQTT-Client\bin\Debug\net9.0-windows\WPF-MQTT-Client.exe
+E:\self_learning\projects\protocol-clients-servers\MQTT-client\WPF-MQTT-Client\WPF-MQTT-Client\bin\Debug\net9.0-windows\WPF-MQTT-Client.deps.json
+E:\self_learning\projects\protocol-clients-servers\MQTT-client\WPF-MQTT-Client\WPF-MQTT-Client\bin\Debug\net9.0-windows\WPF-MQTT-Client.runtimeconfig.json
+E:\self_learning\projects\protocol-clients-servers\MQTT-client\WPF-MQTT-Client\WPF-MQTT-Client\bin\Debug\net9.0-windows\WPF-MQTT-Client.dll
+E:\self_learning\projects\protocol-clients-servers\MQTT-client\WPF-MQTT-Client\WPF-MQTT-Client\bin\Debug\net9.0-windows\WPF-MQTT-Client.pdb
+E:\self_learning\projects\protocol-clients-servers\MQTT-client\WPF-MQTT-Client\WPF-MQTT-Client\bin\Debug\net9.0-windows\MQTTnet.dll
+E:\self_learning\projects\protocol-clients-servers\MQTT-client\WPF-MQTT-Client\WPF-MQTT-Client\bin\Debug\net9.0-windows\MQTTnet.Extensions.ManagedClient.dll
+E:\self_learning\projects\protocol-clients-servers\MQTT-client\WPF-MQTT-Client\WPF-MQTT-Client\obj\Debug\net9.0-windows\MainWindow.baml
+E:\self_learning\projects\protocol-clients-servers\MQTT-client\WPF-MQTT-Client\WPF-MQTT-Client\obj\Debug\net9.0-windows\WPF-MQTT-Client.g.resources
+E:\self_learning\projects\protocol-clients-servers\MQTT-client\WPF-MQTT-Client\WPF-MQTT-Client\obj\Debug\net9.0-windows\WPF-MQTT-Client.GeneratedMSBuildEditorConfig.editorconfig
+E:\self_learning\projects\protocol-clients-servers\MQTT-client\WPF-MQTT-Client\WPF-MQTT-Client\obj\Debug\net9.0-windows\WPF-MQTT-Client.AssemblyInfoInputs.cache
+E:\self_learning\projects\protocol-clients-servers\MQTT-client\WPF-MQTT-Client\WPF-MQTT-Client\obj\Debug\net9.0-windows\WPF-MQTT-Client.AssemblyInfo.cs
+E:\self_learning\projects\protocol-clients-servers\MQTT-client\WPF-MQTT-Client\WPF-MQTT-Client\obj\Debug\net9.0-windows\WPF-MQTT-Client.csproj.CoreCompileInputs.cache
+E:\self_learning\projects\protocol-clients-servers\MQTT-client\WPF-MQTT-Client\WPF-MQTT-Client\obj\Debug\net9.0-windows\WPF-MQTT-Client.sourcelink.json
+E:\self_learning\projects\protocol-clients-servers\MQTT-client\WPF-MQTT-Client\WPF-MQTT-Client\obj\Debug\net9.0-windows\WPF-MQTT.DFADD697.Up2Date
+E:\self_learning\projects\protocol-clients-servers\MQTT-client\WPF-MQTT-Client\WPF-MQTT-Client\obj\Debug\net9.0-windows\WPF-MQTT-Client.dll
+E:\self_learning\projects\protocol-clients-servers\MQTT-client\WPF-MQTT-Client\WPF-MQTT-Client\obj\Debug\net9.0-windows\refint\WPF-MQTT-Client.dll
+E:\self_learning\projects\protocol-clients-servers\MQTT-client\WPF-MQTT-Client\WPF-MQTT-Client\obj\Debug\net9.0-windows\WPF-MQTT-Client.pdb
+E:\self_learning\projects\protocol-clients-servers\MQTT-client\WPF-MQTT-Client\WPF-MQTT-Client\obj\Debug\net9.0-windows\WPF-MQTT-Client.genruntimeconfig.cache
+E:\self_learning\projects\protocol-clients-servers\MQTT-client\WPF-MQTT-Client\WPF-MQTT-Client\obj\Debug\net9.0-windows\ref\WPF-MQTT-Client.dll
+E:\self_learning\projects\protocol-clients-servers\MQTT-client\WPF-MQTT-Client - Copy\WPF-MQTT-Client\bin\Debug\net9.0-windows\WPF-MQTT-Client.exe
+E:\self_learning\projects\protocol-clients-servers\MQTT-client\WPF-MQTT-Client - Copy\WPF-MQTT-Client\bin\Debug\net9.0-windows\WPF-MQTT-Client.deps.json
+E:\self_learning\projects\protocol-clients-servers\MQTT-client\WPF-MQTT-Client - Copy\WPF-MQTT-Client\bin\Debug\net9.0-windows\WPF-MQTT-Client.runtimeconfig.json
+E:\self_learning\projects\protocol-clients-servers\MQTT-client\WPF-MQTT-Client - Copy\WPF-MQTT-Client\bin\Debug\net9.0-windows\WPF-MQTT-Client.dll
+E:\self_learning\projects\protocol-clients-servers\MQTT-client\WPF-MQTT-Client - Copy\WPF-MQTT-Client\bin\Debug\net9.0-windows\WPF-MQTT-Client.pdb
+E:\self_learning\projects\protocol-clients-servers\MQTT-client\WPF-MQTT-Client - Copy\WPF-MQTT-Client\bin\Debug\net9.0-windows\MQTTnet.dll
+E:\self_learning\projects\protocol-clients-servers\MQTT-client\WPF-MQTT-Client - Copy\WPF-MQTT-Client\bin\Debug\net9.0-windows\MQTTnet.Extensions.ManagedClient.dll
+E:\self_learning\projects\protocol-clients-servers\MQTT-client\WPF-MQTT-Client - Copy\WPF-MQTT-Client\obj\Debug\net9.0-windows\WPF-MQTT-Client.csproj.AssemblyReference.cache
+E:\self_learning\projects\protocol-clients-servers\MQTT-client\WPF-MQTT-Client - Copy\WPF-MQTT-Client\obj\Debug\net9.0-windows\MainWindow.g.cs
+E:\self_learning\projects\protocol-clients-servers\MQTT-client\WPF-MQTT-Client - Copy\WPF-MQTT-Client\obj\Debug\net9.0-windows\App.g.cs
+E:\self_learning\projects\protocol-clients-servers\MQTT-client\WPF-MQTT-Client - Copy\WPF-MQTT-Client\obj\Debug\net9.0-windows\WPF-MQTT-Client_MarkupCompile.cache
+E:\self_learning\projects\protocol-clients-servers\MQTT-client\WPF-MQTT-Client - Copy\WPF-MQTT-Client\obj\Debug\net9.0-windows\WPF-MQTT-Client_MarkupCompile.lref
+E:\self_learning\projects\protocol-clients-servers\MQTT-client\WPF-MQTT-Client - Copy\WPF-MQTT-Client\obj\Debug\net9.0-windows\MainWindow.baml
+E:\self_learning\projects\protocol-clients-servers\MQTT-client\WPF-MQTT-Client - Copy\WPF-MQTT-Client\obj\Debug\net9.0-windows\WPF-MQTT-Client.g.resources
+E:\self_learning\projects\protocol-clients-servers\MQTT-client\WPF-MQTT-Client - Copy\WPF-MQTT-Client\obj\Debug\net9.0-windows\WPF-MQTT-Client.GeneratedMSBuildEditorConfig.editorconfig
+E:\self_learning\projects\protocol-clients-servers\MQTT-client\WPF-MQTT-Client - Copy\WPF-MQTT-Client\obj\Debug\net9.0-windows\WPF-MQTT-Client.AssemblyInfoInputs.cache
+E:\self_learning\projects\protocol-clients-servers\MQTT-client\WPF-MQTT-Client - Copy\WPF-MQTT-Client\obj\Debug\net9.0-windows\WPF-MQTT-Client.AssemblyInfo.cs
+E:\self_learning\projects\protocol-clients-servers\MQTT-client\WPF-MQTT-Client - Copy\WPF-MQTT-Client\obj\Debug\net9.0-windows\WPF-MQTT-Client.csproj.CoreCompileInputs.cache
+E:\self_learning\projects\protocol-clients-servers\MQTT-client\WPF-MQTT-Client - Copy\WPF-MQTT-Client\obj\Debug\net9.0-windows\WPF-MQTT-Client.sourcelink.json
+E:\self_learning\projects\protocol-clients-servers\MQTT-client\WPF-MQTT-Client - Copy\WPF-MQTT-Client\obj\Debug\net9.0-windows\WPF-MQTT.DFADD697.Up2Date
+E:\self_learning\projects\protocol-clients-servers\MQTT-client\WPF-MQTT-Client - Copy\WPF-MQTT-Client\obj\Debug\net9.0-windows\WPF-MQTT-Client.dll
+E:\self_learning\projects\protocol-clients-servers\MQTT-client\WPF-MQTT-Client - Copy\WPF-MQTT-Client\obj\Debug\net9.0-windows\refint\WPF-MQTT-Client.dll
+E:\self_learning\projects\protocol-clients-servers\MQTT-client\WPF-MQTT-Client - Copy\WPF-MQTT-Client\obj\Debug\net9.0-windows\WPF-MQTT-Client.pdb
+E:\self_learning\projects\protocol-clients-servers\MQTT-client\WPF-MQTT-Client - Copy\WPF-MQTT-Client\obj\Debug\net9.0-windows\WPF-MQTT-Client.genruntimeconfig.cache
+E:\self_learning\projects\protocol-clients-servers\MQTT-client\WPF-MQTT-Client - Copy\WPF-MQTT-Client\obj\Debug\net9.0-windows\ref\WPF-MQTT-Client.dll
