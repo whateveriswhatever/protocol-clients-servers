@@ -1,0 +1,38 @@
+[
+  {
+    "system_code": "456789",
+    "system_name": "ghijkl",
+    "device_code": "laptop",
+    "device_name": "laptop1",
+    "alert_type": 2,
+    "description": "High CPU usage",
+    "note": "Close unused applications"
+  },
+  {
+    "system_code": "789012",
+    "system_name": "mnopqr",
+    "device_code": "desktop",
+    "device_name": "desktop3",
+    "alert_type": 1,
+    "description": "Low disk space",
+    "note": "Delete unnecessary files"
+  },
+  {
+    "system_code": "123456",
+    "system_name": "stuvwx",
+    "device_code": "smartphone",
+    "device_name": "phone1",
+    "alert_type": 4,
+    "description": "Network connectivity issues",
+    "note": "Restart device and check network settings"
+  },
+  {
+    "system_code": "654321",
+    "system_name": "yzabcd",
+    "device_code": "tablet",
+    "device_name": "tablet4",
+    "alert_type": 5,
+    "description": "Screen malfunction",
+    "note": "Contact technical support"
+  }
+]
